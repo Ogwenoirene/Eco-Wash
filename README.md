@@ -31,7 +31,7 @@ No build step or installation is needed.
 1. Download or clone the project.
 3. Open `index.html` in your browser.
 
-An internet connection is required, because Tailwind and Font Awesome load from CDNs.
+An internet connection is required.
 
 
 ## Customizing
