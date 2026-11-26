@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Pickup | EcoWash</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://kit.fontawesome.com/0906bc9ec6.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-sans text-gray-700">
+
+<header class="flex flex-wrap items-center justify-between bg-green-800 px-5 py-4">
+  <a href="index.html" class="text-2xl font-bold text-white">EcoWash</a>
+  <nav class="flex gap-4 text-white">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="book.html" class="hover:underline">Book</a>
+    <a href="orders.html" class="hover:underline">Orders</a>
+    <a href="account.html" class="hover:underline">Login</a>
+  </nav>
+</header>
+
+<section class="px-5 py-10">
+  <div class="mx-auto max-w-4xl">
+    <!-- Pickup Booking Form -->
+    <div id="booking" class="mx-auto max-w-lg rounded-lg border border-gray-300 bg-white p-6 shadow-sm">
+      <h2 class="text-center text-2xl font-bold text-green-800">Book a Laundry Pickup</h2>
+      <p class="mb-5 mt-1 text-center text-gray-500">
+        Fill in your details and we will handle the rest.
+      </p>
+
+    
+
+        <div class="mb-4">
+          <label for="service" class="block font-semibold">Choose Service</label>
+          <select id="service" name="service" required
+            class="mt-1 w-full rounded-md border-2 border-gray-300 bg-white p-2 focus:border-green-600 focus:outline-none">
+            <option value="">-- Select a Laundry Service --</option>
+            <option value="wash-fold">Wash &amp; Fold (KES 150/kg)</option>
+            <option value="duvet">Duvet Cleaning (KES 600/item)</option>
+            <option value="Dry-cleaning">Dry Cleaning(Suits) (KES 900/item)</option>
+            <option value="Dry-cleaning">Dry Cleaning(dress/coat) (KES 400/item)</option>
+            <option value="ironing">Steam Ironing Only (KES 100/piece)</option>
+          </select>
+        </div>
+
+        <!-- Pickup Option-->
+        <div class="mb-4">
+          <input type="radio" name="pickup_option" id="opt-home" value="home-pickup" checked class="peer/home sr-only" />
+          <input type="radio" name="pickup_option" id="opt-drop" value="drop-off" class="peer/drop sr-only" />
+
+          <p class="font-semibold">Pickup Option</p>
+          <div class="mt-2 grid gap-2 sm:grid-cols-2">
+            <label for="opt-home"
+              class="cursor-pointer rounded-lg border-2 border-gray-300 p-3 text-center peer-checked/home:border-green-600 peer-checked/home:bg-green-50 peer-checked/home:font-semibold peer-focus-visible/home:ring-2 peer-focus-visible/home:ring-green-300">
+              Home Pickup &amp; Delivery
+            </label>
+            <label for="opt-drop"
+              class="cursor-pointer rounded-lg border-2 border-gray-300 p-3 text-center peer-checked/drop:border-green-600 peer-checked/drop:bg-green-50 peer-checked/drop:font-semibold peer-focus-visible/drop:ring-2 peer-focus-visible/drop:ring-green-300">
+              I'll Drop Off Myself
+            </label>
+          </div>
+
+          <!-- Address for home pickup -->
+          <div class="mt-4 hidden peer-checked/home:block">
+            <label for="address" class="block font-semibold">Pickup Address / Estate &amp; House No.</label>
+            <input type="text" id="address" name="address"
+              placeholder="e.g., Greenview Apartments, Block B, House 12"
+              class="mt-1 w-full rounded-md border-2 border-gray-300 p-2 focus:border-green-600 focus:outline-none" />
+          </div>
+        </div>
+
+        <div class="mb-4 grid gap-4 sm:grid-cols-2">
+          <div>
+            <label for="pickup-date" class="block font-semibold">Date</label>
+            <input type="date" id="pickup-date" name="pickup_date" required
+              class="mt-1 w-full rounded-md border-2 border-gray-300 p-2 focus:border-green-600 focus:outline-none" />
+          </div>
+          <div>
+            <label for="time-slot" class="block font-semibold">Time Window</label>
+            <select id="time-slot" name="time_slot" required
+              class="mt-1 w-full rounded-md border-2 border-gray-300 bg-white p-2 focus:border-green-600 focus:outline-none">
+              <option value="morning">Morning (8:00 AM &ndash; 11:00 AM)</option>
+              <option value="afternoon">Afternoon (1:00 PM &ndash; 4:00 PM)</option>
+              <option value="evening">Evening (5:00 PM &ndash; 8:00 PM)</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset class="mb-4">
+          <legend class="font-semibold">Eco Care Preferences</legend>
+          <label class="mt-2 flex items-center gap-2">
+            <input type="checkbox" name="pref" value="fragrance-free" class="h-4 w-4 accent-green-600" />
+            Fragrance-Free Soap
+          </label>
+          <label class="mt-2 flex items-center gap-2">
+            <input type="checkbox" name="pref" value="cold-wash" class="h-4 w-4 accent-green-600" />
+            Cold Water Wash
+          </label>
+          <label class="mt-2 flex items-center gap-2">
+            <input type="checkbox" name="pref" value="hang-dry" class="h-4 w-4 accent-green-600" />
+            Line / Air Dry Only
+          </label>
+        </fieldset>
+
+        <div class="mb-4">
+          <label for="notes" class="block font-semibold">Delivery / Gate Instructions (Optional)</label>
+          <textarea id="notes" name="notes" rows="2"
+            placeholder="Gate code, landmarks, or stain details..."
+            class="mt-1 w-full rounded-md border-2 border-gray-300 p-2 focus:border-green-600 focus:outline-none"></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full rounded-md bg-green-600 py-3 text-white hover:bg-green-800">
+          Confirm Pickup Booking
+        </button>
+
+      </form>
+    </div>
+  </div>
+</section>
+<!--footer -->
+<footer class="bg-green-800 px-5 pt-10 text-white">
+  <div class="mx-auto flex max-w-4xl flex-col items-center gap-8 text-center md:flex-row md:items-start md:justify-between md:text-left">
+
+    <div aria-labelledby="visit-title">
+      <h2 id="visit-title" class="mb-3 text-xl font-bold">Visit Us</h2>
+      <address class="flex flex-col gap-1 not-italic">
+        <span class="font-semibold">Eco Wash Laundry</span>
+        <span>Mama Ngina, Kinoo</span>
+        <span>Nairobi, Kenya</span>
+        <a href="tel:+254719376151" class="mt-1 font-semibold hover:underline">+254 719 376 151</a>
+      </address>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <span class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl text-green-800 hover:bg-green-100">
+        <i class="fa-brands fa-whatsapp"></i>
+      </span>
+      <span class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl text-green-800 hover:bg-green-100">
+        <i class="fa-brands fa-facebook"></i>
+      </span>
+      <span class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl text-green-800 hover:bg-green-100">
+        <i class="fa-solid fa-x"></i>
+      </span>
+    </div>
+
+  </div>
+
+  <p class="mt-8 border-t border-green-600 py-4 text-center">&copy; 2026 EcoWash. Fresh clothes, kinder to the planet.</p>
+</footer>
+
+</body>
+</html>

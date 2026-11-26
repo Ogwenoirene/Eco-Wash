@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Orders | EcoWash</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-sans text-gray-700">
+
+<header class="flex flex-wrap items-center justify-between bg-green-800 px-5 py-4">
+  <a href="index.html" class="text-2xl font-bold text-white">EcoWash</a>
+  <nav class="flex gap-4 text-white">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="book.html" class="hover:underline">Book</a>
+    <a href="orders.html" class="hover:underline">Orders</a>
+    <a href="account.html" class="hover:underline">Login</a>
+  </nav>
+</header>
+
+<section class="mx-auto max-w-4xl px-5 py-10">
+  <h2 class="mb-6 text-center text-2xl font-bold text-green-800">My Orders</h2>
+
+  <div class="rounded-lg border border-green-200 bg-green-50 p-5">
+    <h3 class="text-lg font-semibold">Current Order #EW-1043</h3>
+
+    <ol class="my-5 grid grid-cols-2 gap-3 text-sm md:grid-cols-4">
+      <li class="border-t-4 border-green-600 pt-2 font-semibold text-green-800">Picked Up</li>
+      <li class="border-t-4 border-yellow-400 pt-2 font-bold text-green-800">Washing</li>
+      <li class="border-t-4 border-gray-300 pt-2 text-gray-500">Drying &amp; Folding</li>
+      <li class="border-t-4 border-gray-300 pt-2 text-gray-500">Out for Delivery</li>
+    </ol>
+
+    <p>Expected delivery: today, 5 PM - 8 PM</p>
+  </div>
+
+  <h3 class="mb-3 mt-8 text-lg font-semibold">Past Orders</h3>
+  <div class="overflow-x-auto">
+    <table class="w-full text-left">
+      <thead class="bg-green-600 text-white">
+        <tr>
+          <th class="p-3">Order ID</th>
+          <th class="p-3">Date</th>
+          <th class="p-3">Weight / Items</th>
+          <th class="p-3">Total (KES)</th>
+          <th class="p-3"></th>
+        </tr>
+      </thead>
+      <tbody class="[&>tr:nth-child(even)]:bg-green-50 [&>tr]:border-b">
+        <tr>
+          <td class="p-3">EW-1038</td><td class="p-3">12 Nov 2026</td><td class="p-3">6 kg</td><td class="p-3">900</td>
+          <td class="p-3"><a href="book.html" class="rounded-md bg-green-600 px-3 py-1 text-sm text-white hover:bg-green-800">Re-order</a></td>
+        </tr>
+        <tr>
+          <td class="p-3">EW-1029</td><td class="p-3">05 Nov 2026</td><td class="p-3">1 duvet</td><td class="p-3">600</td>
+          <td class="p-3"><a href="book.html" class="rounded-md bg-green-600 px-3 py-1 text-sm text-white hover:bg-green-800">Re-order</a></td>
+        </tr>
+        <tr>
+          <td class="p-3">EW-1017</td><td class="p-3">28 Oct 2026</td><td class="p-3">10 shirts</td><td class="p-3">500</td>
+          <td class="p-3"><a href="book.html" class="rounded-md bg-green-600 px-3 py-1 text-sm text-white hover:bg-green-800">Re-order</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="bg-green-800 p-5 text-center text-white">
+  <p>&copy; 2026 EcoWash. Fresh clothes, kinder to the planet.</p>
+</footer>
+
+</body>
+</html>
