@@ -22,7 +22,7 @@
   <div id="auth" class="rounded-lg border border-gray-300 bg-white p-6 shadow-sm">
     <h2 class="text-center text-2xl font-bold text-green-800">Customer Account</h2>
     <p class="mb-5 mt-1 text-center text-gray-500">
-      Track orders, save addresses, and manage subscriptions.
+      Track orders,save address.
     </p>
     <div class="grid grid-cols-2">
       <input type="radio" name="auth-tab" id="tab-login" class="peer/login sr-only" checked />
@@ -39,8 +39,7 @@
       </label>
 
       <!-- Login Form -->
-      <form action="#" method="POST"
-        class="col-span-2 mt-4 hidden peer-checked/login:block">
+      <form class="col-span-2 mt-4 hidden peer-checked/login:block">
         <div class="mb-4">
           <label for="login-email" class="block font-semibold">Email Address</label>
           <input type="email" id="login-email" name="email" placeholder="you@example.com" required
@@ -56,10 +55,8 @@
           Log In to Dashboard
         </button>
       </form>
-
       <!-- Sign Up Form -->
-      <form action="#" method="POST"
-        class="col-span-2 mt-4 hidden peer-checked/signup:block">
+      <form  class="col-span-2 mt-4 hidden peer-checked/signup:block">
         <div class="mb-4">
           <label for="reg-name" class="block font-semibold">Full Name</label>
           <input type="text" id="reg-name" name="name" placeholder="Jane Doe" required
@@ -85,7 +82,6 @@
           Create Free Account
         </button>
       </form>
-
     </div>
   </div>
 </main>
@@ -117,6 +113,5 @@
   </div>
   <p>&copy; 2026 EcoWash. Fresh clothes, kinder to the planet.</p>
 </footer>
-
 </body>
 </html>
